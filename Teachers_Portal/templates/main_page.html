@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Teachers Portal</title>
+</head>
+<body>
+<h1>Welcome to Teachers Portal</h1>
+{% if user.username %}
+	{% ifequal user.username "vartul" %}
+		<p>Welcome {{ user.username }}!Here you can store your research papers and add other teachers also!</p>
+		<a href="/logout/">logout<br>	
+		<a href="/admin/">Manage Users<br>
+		<a href="/user_page/">View
+	{% else %}
+	<p>Welcome {{ user.username }}!Here you can store your research papers.</p>
+	<a href="/logout/">logout	
+	{% endifequal %}<br>
+	<a href="/upload_paper	/"> upload
+{% else %}
+<p>You need to contact the ADMIN before you can store your research papers.</p>
+<a href="/login/"> login
+{% endif %}
+</body>
+</html>

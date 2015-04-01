@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{{ username }}{% endblock %}
+{% block head %}Bookmarks for {{ username }}{% endblock %}
+{% block content %}
+{% if bookmarks %}
+<ul>
+{% if data.file %}
+<li><a href="C:\Teachers_Portal\">
+{{ Format.file }}</a></li>
+{% endif %}
+</ul>
+{% else %}
+<p>No bookmarks found.</p>
+{% endif %}
+{% endblock %}
